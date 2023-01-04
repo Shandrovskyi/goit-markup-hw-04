@@ -3,6 +3,8 @@
     --accent-color: #4D5AE5;
     --white-color: #FFFFFF;
     --text-color: #434455;
+    --icon-color: #AFB1B8;
+    --soc-link-color:#F4F4FD;
  }
  p,
  h1,
@@ -76,15 +78,21 @@ img {
 
 .studio-header{
     color:var(--title-color) ;
-    padding-right: 76px;
+    margin-right: 76px;
 }
 
 .header-navigation{
     display: flex;
     align-items: center;
     margin-right: auto;
-    gap: 40px;
     
+}
+
+.header-navigation-list{
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    gap: 40px; 
 }
 
 
@@ -96,7 +104,6 @@ img {
 .header-item {
     padding-top:24px;
     padding-bottom: 24px;
-    
 }
 
 .header-link {
@@ -104,14 +111,12 @@ img {
     font-size: 16px;
     line-height: 1.5em;
     letter-spacing: 0.02em;
-    color: var(--title-color);
-    gap: 40px;
-    
+    color: var(--title-color);    
 }
 
 .header-link:hover, 
 .header-link:focus {
-    color: olive;
+    color: var(--accent-color)
 }
 
 
@@ -130,7 +135,7 @@ img {
 
 .contacts-list .couple:hover,
 .contacts-list .couple:focus {
-    color: olive;
+    color: var(--accent-color)
 }
 
 /* ========================</PROFILE HEADER>=================== */
@@ -208,7 +213,7 @@ img {
     background-position: 50% 50%;
     border-radius: 4px;
     background-color: #F4F4FD;
-    padding-bottom: 8px;
+    margin-bottom: 8px;
 }
 
 .section-li:nth-child(2)::before{
@@ -294,7 +299,6 @@ img {
     background-color: #F4F4FD;
     padding-top: 120px;
     padding-bottom: 120px;
-    max-width: 1600px;
     margin: auto;
 }
 
@@ -349,10 +353,13 @@ img {
     gap: 24px;
 }
 
+
 .team-social-items {
     width: 44px;
     height: 44px;
 }
+
+
 .team-social-link {
     width: 100%;
     height: 100%;
@@ -362,6 +369,13 @@ img {
     align-items: center;
     justify-content: center;
 }
+
+.team-social-link:hover,
+.team-social-link:focus
+{
+    background-color: var(--title-color);
+}
+
 
 /* ==========================</TEAM>================== */
 
@@ -408,15 +422,19 @@ img {
 }
 
 .customers-link:hover {
-    border-color: olive;
+    border-color: var(--accent-color)
 }
 
-.customers-link:hover .customers-icon {
-    fill: olive;
+.customers-link:hover .customers-icon,
+.customers-link:focus .customers-icon {
+    fill: var(--accent-color);
+    
 }
 
 
 .customers-icon {
+    fill: var(--icon-color);
+
 
 }
 
@@ -432,14 +450,12 @@ img {
     background-color: var(--title-color);
     padding-bottom: 100px;
     padding-top: 100px;
-    max-width: 1600px;
     margin: auto;
 }   
 
 
 .footer-container {
     display: flex;
-
 }
 
 .footer-text {
@@ -500,14 +516,19 @@ img {
 .footer-social-link {
     width: 100%;
     height: 100%;
-    background-color:rgba(255, 255, 255, 0.1);
+    background-color: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.footer-icon {
+
+
+.footer-social-link:hover,
+.footer-social-link:focus  {
+
+    background-color: #3fc380; 
 }
 
 
@@ -546,6 +567,7 @@ img {
     cursor: pointer;
     border: 1px solid #E7E9FC;
     border-radius: 4px;
+    padding: 12px 24px;
 
 }
 .portfolio-same-button{
@@ -559,8 +581,8 @@ img {
     cursor: pointer;
     border: 1px solid #E7E9FC;
     border-radius: 4px;
-    min-width: 78px;
     height: 48px;
+    padding: 12px 24px;
 
 }
 
@@ -579,6 +601,13 @@ img {
     align-items: center;
     column-gap: 24px;
     row-gap: 48px;
+    cursor: pointer;
+}
+
+.portfolio-list-item:hover,
+.portfolio-list-item:focus{
+    box-shadow: 10px 10px 8px 2px 
+    rgba(0, 0, 0, 0.3);
 }
 
 
@@ -587,7 +616,6 @@ img {
     padding-top: 32px;
     padding-bottom: 32px;
     border: 1px solid #E7E9FC;
-
 }
 
 .portfolio-about {
